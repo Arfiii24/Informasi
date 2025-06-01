@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Berita Terkini</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background-color: #f4f6f8;
+        color: #333;
+        line-height: 1.6;
+      }
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px 15px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      header p {
+        margin: 5px 0 0;
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+      main {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 15px;
+      }
+      article {
+        background: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+      }
+      article:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+      article h2 {
+        margin-top: 0;
+        color: #007bff;
+      }
+      article time {
+        font-size: 0.85rem;
+        color: #666;
+      }
+      article p.summary {
+        margin: 10px 0 15px;
+      }
+      article a.read-more {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 10px;
+      }
+      article a.read-more:hover {
+        text-decoration: underline;
+      }
+      .full-content {
+        display: none;
+        margin-top: 15px;
+        color: #444;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+        line-height: 1.5;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      .full-content.show {
+        display: block;
+        max-height: 1000px;
+      }
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #e9ecef;
+        color: #555;
+        font-size: 0.9rem;
+        margin-top: 40px;
+      }
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+        main {
+          margin: 20px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Berita Terkini</h1>
+      <p>Update terbaru: <span id="currentDate"></span></p>
+    </header>
+
+    <main>
+      <!-- Berita Teknologi AI -->
+      <article>
+        <h2>Perkembangan Teknologi AI di Tahun 2025</h2>
+        <time datetime="2025-05-26">26 Mei 2025</time>
+        <p class="summary">
+          Teknologi kecerdasan buatan terus berkembang pesat dengan inovasi
+          terbaru yang mengubah berbagai sektor industri...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Teknologi kecerdasan buatan (AI) telah mencapai tonggak penting di
+            tahun 2025 dengan berbagai inovasi yang mempercepat otomatisasi dan
+            analisis data. Perusahaan teknologi besar berlomba-lomba
+            mengembangkan AI yang lebih cerdas dan efisien, yang berdampak besar
+            pada sektor kesehatan, transportasi, dan manufaktur. Selain itu,
+            regulasi dan etika AI menjadi fokus utama untuk memastikan teknologi
+            ini digunakan secara bertanggung jawab.
+          </p>
+        </div>
+      </article>
+
+      <!-- Berita Ekonomi -->
+      <article>
+        <h2>Ekonomi Global Mengalami Pemulihan Pasca Pandemi</h2>
+        <time datetime="2025-05-25">25 Mei 2025</time>
+        <p class="summary">
+          Laporan terbaru menunjukkan tanda-tanda pemulihan ekonomi global yang
+          signifikan setelah masa sulit pandemi COVID-19...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Setelah dua tahun menghadapi tantangan pandemi, ekonomi global mulai
+            menunjukkan pemulihan yang kuat. Sektor pariwisata, perdagangan, dan
+            manufaktur mengalami peningkatan signifikan. Bank sentral di
+            berbagai negara juga mulai menyesuaikan kebijakan moneter untuk
+            mendukung pertumbuhan yang berkelanjutan. Namun, ketidakpastian
+            geopolitik dan perubahan iklim tetap menjadi risiko yang harus
+            diwaspadai.
+          </p>
+        </div>
+      </article>
+
+      <!-- Berita Festival Film -->
+      <article>
+        <h2>Festival Film Internasional Kembali Digelar di Jakarta</h2>
+        <time datetime="2025-05-24">24 Mei 2025</time>
+        <p class="summary">
+          Festival film bergengsi ini akan menampilkan karya-karya terbaik dari
+          berbagai negara dengan tema keberagaman budaya...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Festival Film Internasional Jakarta kembali digelar dengan
+            antusiasme tinggi dari para sineas dan penonton. Acara ini
+            menampilkan berbagai film dari genre drama, dokumenter, hingga
+            animasi yang mengangkat tema keberagaman budaya dan isu sosial.
+            Selain pemutaran film, festival ini juga mengadakan workshop dan
+            diskusi panel yang melibatkan para profesional industri film.
+          </p>
+        </div>
+      </article>
+
+      <!-- Berita Game Online -->
+      <article>
+        <h2>Team Mobile Legend EVOS GLORY Back to Back Tidak Lolos Playoff</h2>
+        <time datetime="2025-03-27">25 Mei 2025</time>
+        <p class="summary">
+          Tim Mobile Legend EVOS GLORY kembali gagal lolos ke babak playoff
+          untuk keempat kalinya, menimbulkan keprihatinan di kalangan penggemar
+          dan analis esports..
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            EVOS GLORY, salah satu tim Mobile Legend yang cukup dikenal,
+            mengalami masa sulit dengan tidak berhasil lolos ke babak playoff
+            selama empat kali berturut-turut. Hal ini menjadi sorotan besar di
+            komunitas esports Indonesia, mengingat ekspektasi tinggi terhadap
+            performa tim ini. Para analis menyebutkan perlunya evaluasi mendalam
+            dan strategi baru agar EVOS GLORY bisa kembali bersaing di level
+            tertinggi. Para penggemar berharap tim ini dapat bangkit dan
+            memperbaiki performa di turnamen-turnamen mendatang.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <h2>PUBG Mobile Tetap Jadi Game Battle Royale Terpopuler di 2025</h2>
+        <time datetime="2025-05-26">26 Mei 2025</time>
+        <p class="summary">
+          PUBG Mobile terus mempertahankan popularitasnya dengan update rutin
+          dan komunitas solid...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Sejak dirilis pada Februari 2018, PUBG Mobile telah menjadi favorit
+            di kalangan gamer mobile. Pada tahun 2025, game ini masih aktif
+            dengan berbagai pembaruan konten, termasuk peta baru, mode
+            permainan, dan event kolaborasi dengan berbagai franchise populer.
+            Komunitas PUBG Mobile juga dikenal sangat aktif dan mendukung
+            berbagai turnamen e-sports di seluruh dunia.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <h2>Free Fire Terus Menghadirkan Karakter dan Event Baru</h2>
+        <time datetime="2025-05-25">25 Mei 2025</time>
+        <p class="summary">
+          Free Fire tetap digemari dengan karakter unik dan event menarik yang
+          rutin diadakan...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Free Fire, yang dirilis pada Desember 2017, dikenal dengan
+            karakter-karakter unik yang memiliki skill khusus. Pada tahun 2025,
+            Garena terus menghadirkan update dengan karakter baru, skin, dan
+            event kolaborasi dengan berbagai brand dan selebriti. Hal ini
+            menjaga antusiasme pemain dan memperkuat posisi Free Fire di pasar
+            game mobile.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <h2>
+          Call of Duty: Warzone Mobile Tawarkan Pengalaman FPS dengan Map Ikonik
+        </h2>
+        <time datetime="2024-03-20">20 Maret 2024</time>
+        <p class="summary">
+          Call of Duty: Warzone Mobile menghadirkan pengalaman FPS mobile dengan
+          peta Verdansk dan Rebirth Island...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Dirilis pada Maret 2024, Call of Duty: Warzone Mobile membawa
+            sensasi battle royale dengan grafis dan gameplay yang mendekati
+            versi PC/console. Game ini menawarkan mode permainan yang intens
+            dengan jumlah pemain besar, serta fitur cross-play yang memungkinkan
+            pemain dari berbagai platform bertanding bersama.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <h2>Valorant Mobile Siap Menggebrak Pasar Game Mobile</h2>
+        <time datetime="2025-01-01">2025</time>
+        <p class="summary">
+          Valorant Mobile sedang dalam tahap pengembangan dan diperkirakan akan
+          segera dirilis...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Riot Games mengumumkan bahwa Valorant Mobile akan segera hadir untuk
+            para penggemar game FPS di perangkat mobile. Game ini akan
+            mempertahankan elemen taktis dan karakteristik unik dari versi PC,
+            dengan kontrol yang dioptimalkan untuk layar sentuh. Valorant Mobile
+            diharapkan menjadi pesaing kuat di genre FPS mobile.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <h2>Minecraft Tetap Eksis dengan Update dan Komunitas Kreatif</h2>
+        <time datetime="2025-05-01">13 Mei 2025</time>
+        <p class="summary">
+          Minecraft terus berkembang dengan update konten baru dan komunitas
+          kreatif yang aktif...
+        </p>
+        <a class="read-more" onclick="toggleContent(this)">Baca Selengkapnya</a>
+        <div class="full-content">
+          <p>
+            Minecraft, game sandbox legendaris, tetap populer di tahun 2025
+            dengan update rutin yang menambah fitur baru, blok, dan mekanisme
+            permainan. Komunitas pemain yang besar dan kreatif terus menciptakan
+            mod, peta, dan server unik yang memperkaya pengalaman bermain. Versi
+            mobile Minecraft juga terus mendapatkan pembaruan untuk menjaga
+            kompatibilitas dan performa.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>&copy; 2025 Berita Terkini. Semua hak cipta dilindungi.</footer>
+
+    <script>
+      // Menampilkan tanggal hari ini dalam format Indonesia
+      const currentDateElem = document.getElementById("currentDate");
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      const today = new Date();
+      currentDateElem.textContent = today.toLocaleDateString("id-ID", options);
+
+      // Fungsi toggle untuk menampilkan/menyembunyikan konten lengkap berita
+      function toggleContent(element) {
+        const fullContent = element.nextElementSibling;
+        if (fullContent.classList.contains("show")) {
+          fullContent.classList.remove("show");
+          element.textContent = "Baca Selengkapnya";
+        } else {
+          fullContent.classList.add("show");
+          element.textContent = "Sembunyikan";
+        }
+      }
+    </script>
+  </body>
+</html>
